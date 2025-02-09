@@ -129,10 +129,10 @@ const Customizer = () => {
           <>
             <motion.div
               key="custom"
-              className="absolute top-80 left-0 z-10"
+              className="absolute top-0 left-0 z-10"
               {...slideAnimation('left')}
             >
-              <div className="flix item-center min-h-screen">
+              <div className="flex items-center min-h-screen">
                 <div className="editortabs-container tabs">
                   {EditorTabs.map((tab) => (
                     <Tab
@@ -152,7 +152,7 @@ const Customizer = () => {
                 type="filled"
                 title="Go back"
                 handleClick={() => (state.intro = true)}
-                cusustomStyles="w-fit px-4 py-2.5 font-bold text-sm"
+                customStyles="w-fit px-4 py-2.5 font-bold text-sm"
               />
             </motion.div>
 
@@ -356,7 +356,8 @@ export default Customizer;
 //                 type="filled"
 //                 title="Go back"
 //                 handleClick={() => state.intro = true}
-//                 cusustomStyles="w-fit px-4 py-2.5 font-bold text-sm"
+//                 customStyles="w-fit px-4 py-2.5 font-bold text-sm"
+
 //               />
 //             </motion.div>
 
