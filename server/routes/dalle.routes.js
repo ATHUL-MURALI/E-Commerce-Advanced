@@ -50,7 +50,7 @@ router.route('/generate-image').post(async (req, res) => {
   try {
     const { prompt } = req.body;
 
-    // Generate the image using the Hugging Face API
+    //Generate the image using the Hugging Face API
     const imagePath = await generateImage(prompt);
 
     // Respond with the path where the image is saved
