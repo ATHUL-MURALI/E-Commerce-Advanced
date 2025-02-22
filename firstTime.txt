@@ -29,11 +29,6 @@ export default {
 
 
 
-.env
-OPENAI_API_KEY=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
-
-
-01a07cb0-bd46-11ef-aced-b961b333baed
 
 
 
@@ -43,47 +38,13 @@ OPENAI_API_KEY=sk-proj-GQbenh8dppQELfCa4PUs0uFe_6ktByHUXsg3hWO8kpK1be1gj2BMLrq8q
 
 
 
+how to install server venv:
 
-import React from 'react'
-
-import CustomButton from './CustomButton'
-
-const AIPicker = ({ prompt, setPrompt, generatingImg,handleSubmit }) => {
-  return (
-    <div className='aipicker-container'>
-      <textarea 
-        placeholder='Ask AI...'
-        rows={5}
-        value={prompt}
-        onChange={(e) => setPrompt(e.target.value)}
-        className='aipicker-textarea'
-      />
-      <div className='flex flex-wrap gap-3'>
-        {generatingImg ? (
-          <CustomButton 
-            type="outline"
-            title="Asking AI..."
-            customStyles="text-xs"
-          />
-        ) : (
-          <>
-            <CustomButton 
-              type="outline"
-              title="AI Logo"
-              handleClick={() => handleSubmit('logo')}
-              customStyles="text-xs"
-            />
-            <CustomButton 
-              type="filled"
-              title="AI Full"
-              handleClick={() => handleSubmit('full')}
-              customStyles="text-xs"
-            />
-          </>
-        )}
-      </div>
-    </div>
-  )
-}
-
-export default AIPicker
+cd server
+python -m venv venv
+.\venv\Scripts\activate
+pip install torch --index-url https://download.pytorch.org/whl/cu121
+(when u are going to run below code remove torch line from the requirements.txt)
+pip install -r .\requirements.txt
+python main.py
+uvicorn main:app --reload
