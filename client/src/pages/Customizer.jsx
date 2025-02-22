@@ -55,25 +55,24 @@ const Customizer = () => {
     try {
       setGeneratingImg(true);
 
-      // Hugging Face API request
-      const response = await fetch('https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2', {
+      const response = await fetch('http://127.0.0.1:8000/generate-image', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer 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`, // Your Hugging Face API Key
         },
         body: JSON.stringify({
-          inputs: prompt,
+          prompt,
         }),
       });
+      
 
       if (!response.ok) {
         throw new Error('Failed to generate image');
       }
 
-      const data = await response.blob(); // Get the image blob
+      const data = await response.json();
+      const imageUrl = `data:image/png;base64,${data.image}`;
 
-      const imageUrl = URL.createObjectURL(data); // Create an object URL for the image
       handleDecals(type, imageUrl); // Pass the image URL to the decals handler
     } catch (error) {
       alert(error);
