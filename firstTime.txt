@@ -38,13 +38,21 @@ export default {
 
 
 
-how to install server venv:
+how to install :
+
+Terminal 1:
 
 cd server
 python -m venv venv
 .\venv\Scripts\activate
 pip install torch --index-url https://download.pytorch.org/whl/cu121
-(when u are going to run below code remove torch line from the requirements.txt)
 pip install -r .\requirements.txt
 python main.py
 uvicorn main:app --reload
+
+
+Terminal 2:
+
+cd client
+npm i
+npm run dev
