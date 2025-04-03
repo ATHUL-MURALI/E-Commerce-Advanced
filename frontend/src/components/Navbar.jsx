@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   const redirectToAnotherProject = () => {
-    window.location.href = 'https://your-other-project-url.com';
+    window.location.href = 'http://localhost:5175/';
   };
 
   // Hover effect for buttons and links
