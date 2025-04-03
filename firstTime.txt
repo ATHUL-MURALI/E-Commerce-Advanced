@@ -22,3 +22,11 @@ server
 .gitignore
 firstTime.txt)-3D shirt
 
+(admin
+backend
+frontend
+node_modules
+.gitattributes
+package.json
+package-lock.json
+)
