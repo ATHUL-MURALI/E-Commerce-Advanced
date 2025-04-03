@@ -30,3 +30,34 @@ node_modules
 package.json
 package-lock.json
 )
+
+
+
+Forever fullstack:
+
+Terminal 1:
+
+chatbot:
+python app.py
+
+
+
+Terminal 2:
+
+cd frontend
+npm run dev
+
+
+
+Terminal 3:
+
+cd backend
+npm start
+
+
+
+Terminal 4:
+
+cd admin
+npm run dev
+
