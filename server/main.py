@@ -14,20 +14,23 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5177"],  # Your frontend URL
+    allow_origins=["http://localhost:5175"],  # Your frontend URL
     allow_credentials=True,
     allow_methods=["*"],  # Allows all methods like GET, POST, OPTIONS, etc.
     allow_headers=["*"],  # Allows all headers
 )
 
-small_model = "stabilityai/stable-diffusion-2-1"
+# small_model = "stabilityai/stable-diffusion-2-1"
 
-print("Loading model...")
-pipe = StableDiffusionPipeline.from_pretrained(small_model, torch_dtype=torch.float16)
+local_model_path = r"C:\STORAGE\React_Projects\E-Commerce-Advanced\server\stable_diffusion_model"
+
+
+print("Loading model from local path...")
+pipe = StableDiffusionPipeline.from_pretrained(local_model_path, torch_dtype=torch.float16)
 pipe.scheduler = DPMSolverMultistepScheduler.from_config(pipe.scheduler.config)
 pipe.enable_attention_slicing()
 pipe = pipe.to("cuda")
-print("Model loaded successfully")
+print("Model loaded successfully from disk.")
 
 @app.post("/generate-image")
 async def generate_image(request: PromptRequest):
