@@ -166,7 +166,7 @@ const Customizer = () => {
                 />
               ))}
             </motion.div>
-
+{/*ivide                                                                                                           */}
             <div className="canvas-container relative">
             <button className='download-btn absolute bottom-4 right-4 bg-white p-2 rounded shadow z-50'
               onClick={downloadCanvasToImage}>
@@ -177,7 +177,7 @@ const Customizer = () => {
               />
             </button>
             </div>
-
+{/*ivide                                                                                                           */}
           </>      
         )}
       </AnimatePresence>

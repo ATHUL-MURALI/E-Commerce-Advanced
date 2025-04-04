@@ -38,6 +38,8 @@ Forever fullstack:
 Terminal 1:
 
 chatbot:
+cd frontend
+cd src
 python app.py
 
 
