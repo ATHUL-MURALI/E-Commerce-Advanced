@@ -99,7 +99,7 @@ const Customizer = () => {
   
     state[decalType.stateProperty] = result;
   
-    imageDataStore.ImgData = result; // <-- Save image globally
+    // imageDataStore.ImgData = result; // <-- Save image globally
   
     if (!activeFilterTab[decalType.filterTab]) {
       handleActiveFilterTab(decalType.filterTab);

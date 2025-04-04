@@ -22,8 +22,8 @@ app.add_middleware(
 
 # small_model = "stabilityai/stable-diffusion-2-1"
 
-local_model_path = r"C:\STORAGE\React_Projects\E-Commerce-Advanced\server\stable_diffusion_model"
-
+# local_model_path = r"C:\STORAGE\React_Projects\E-Commerce-Advanced\server\stable_diffusion_model"
+local_model_path = r"C:\STORAGE\React_Projects\E-Commerce-Advanced\FineTuning StableD\fine_tuned_model"
 
 print("Loading model from local path...")
 pipe = StableDiffusionPipeline.from_pretrained(local_model_path, torch_dtype=torch.float16)
