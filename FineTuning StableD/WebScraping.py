@@ -4,7 +4,17 @@ from bing_image_downloader import downloader
 import shutil
 
 # Define the keywords and output directory
-keywords = ["ferrari", "bmw", "tata"]
+keywords = [
+    "minimal tech logo",
+    "modern fashion logo",
+    "gaming logo design",
+    "restaurant logo vector",
+    "fitness gym logo",
+    "luxury brand logo",
+    "e-sports team logo",
+    "coffee shop logo",
+    "mascot cartoon logo"
+]
 output_dir = "./FineTuning StableD/logos_dataset"
 
 # Ensure output directory exists
